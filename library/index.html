@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Library Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-wrapper">
+        <button id="new-book" class="xfnt bold">New Book</button>
+        <form class="content-wrapper hidden" id="book-form">
+            <p class="main-title xfnt bold">Library Project</p>
+            <div class="input-wrapper">
+                <label for="title" class="input-title">Title</label>
+                <input type="text" name="title" id="title" class="input-wrapper" required>
+            </div>
+            <div class="input-wrapper">
+                <label for="author" class="input-title">Author</label>
+                <input type="text" name="author" id="author" class="input-wrapper"required>
+            </div>
+            <div class="input-wrapper">
+                <label for="pages" class="input-title">Pages</label>
+                <input type="number" name="pages" id="pages" class="input-wrapper" required>
+            </div>
+            <div class="input-wrapper">
+                <label for="read" class="input-title">Read</label>
+                <input type="checkbox" name="read" id="read" class="input-wrapper">
+            </div>
+            <button type="submit" form="book-form" id="submit-btn" class="bold xfnt">Add Book</button>
+        </div>
+    </div>
+
+    <div class="library-wrapper">
+    </div>
+
+    <script src="javascript.js"></script>
+</body>
+</html>

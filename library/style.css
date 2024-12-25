@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --shadow: #e7e6e6;
+}
+
+button {
+    display: block;
+    background-color: #548f45;
+    color: #ffffff;
+    border: none;
+    min-width:100px;
+    border-radius: 30px;
+    box-shadow: 0px 1px 5px rgb(153, 152, 152);
+    padding: .5rem;
+    margin-left: auto;
+    margin-right:auto;
+    margin-bottom: 8px;
+}
+
+button:hover {
+    filter:brightness(.9);
+}
+
+button:active {
+    filter: brightness(.8);
+}
+
+label {
+    display: block;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.xfnt {
+    font-size:1.4rem;
+}
+
+.mfnt {
+    font-size:1rem;
+}
+
+.secondary {
+    background-color: #dfdfdf;
+    color: #303030;
+}
+
+.hidden {
+    display: none;
+}
+
+[class*="-title"] {
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.main-wrapper {
+    border-radius:10px;
+    box-shadow: 1px 1px 2px rgb(90, 90, 90);
+}
+
+
+.main-wrapper, .library-wrapper {
+    background-color: #cedfaf;
+    padding: 16px;
+    margin: 32px;
+}
+
+.content-wrapper {
+    background-color: #f2f5eb;
+    box-shadow: 1px 1px 2px rgb(90, 90, 90);
+    border-radius: 10px;
+    padding: 8px;
+}
+
+.book-card > div:not(:last-child) {
+    margin:.5rem 0;
+}
+
+.book-card > div:nth-last-of-type(2) {
+    margin-bottom: .5rem;
+}
+
+.input-wrapper, .content-wrapper > * {
+    width: fit-content;
+    margin: 8px auto;
+}
+
+input[type="checkbox"] {
+    margin-left: 12px;
+}
+
+input[type="text"], input[type="number"] {
+    padding: 8px;
+    width:300px;
+}
+
+.library-wrapper {
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    max-width:fit-content;
+    overflow-x:auto;
+    border-radius:15px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.book-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 1px 1px 3px rgb(90, 90, 90);
+    min-width:fit-content;
+    padding: 16px;
+    margin: 16px;
+}
+
+.button-wrapper {
+    min-width: max-content;
+    margin-top: 1rem;
+    height:fit-content;
+}
+
+.button-wrapper >* {
+    display: block;
+    margin: auto 5px;
+}
+
+.button-wrapper >* {
+    display: inline;
+}
