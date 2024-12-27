@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    color: #252525;
+    border: none;
+}
+
+:root {
+    --mbgc: #7da7df;
+    --mbga: #334596;
+    --mbc: #2f49b9;
+    --sbgc: #ffffff;
+    --cshadow: #474747;
+    --winbgc: #a1e6a7;
+    --brdr: 15px;
+}
+p {
+    width:fit-content;
+    margin-bottom: 16px;
+}
+
+body {
+    background-color: #d8eaf3;
+}
+
+button {
+    background-color: var(--mbc);
+    padding: 8px;
+    border-radius: 15px;
+    box-shadow: 0px 1px 3px var(--cshadow);
+}
+
+label {
+    width:200px;
+    text-align: center;
+}
+
+div {
+    text-align:center;
+}
+
+button:hover {
+    filter:brightness(.9);
+}
+
+button:active {
+    filter:brightness(.8);
+}
+
+button.start-btn {
+    margin-top: 32px;
+}
+
+input[type="text"] {
+    display: block;
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 15px;
+    outline:none;
+    margin: 0 auto 8px;
+}
+
+.xfnt {
+    font-size: 1.4rem;
+    font-weight:bold;
+}
+
+.txtinvert {
+    color:#f0f2f3;
+}
+
+.content-wrapper {
+    height:max-content;
+}
+
+.main-wrapper {
+    background-color: var(--mbgc);
+    padding: 16px;
+    border-radius: var(--brdr);
+    border: 3px solid var(--mbga);
+    box-shadow: 1px 1px 1px var(--cshadow);
+}
+
+.title-wrapper {
+    width:500px;
+    height:300px;
+    margin:0 auto;
+}
+
+.title-wrapper *{
+    display: block;
+    margin: auto;
+}
+
+.centered {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--mbgc);
+    padding: 16px;
+    border-radius: var(--brdr);
+    border: 3px solid var(--mbga);
+    box-shadow: 1px 1px 1px var(--cshadow);
+}
+
+.board-wrapper {
+    background-color: var(--mbga);
+    height: 300px;
+    width:300px;
+    padding: 8px;
+    border-radius: var(--brdr);
+    display: grid;
+    gap: 4px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.cell {
+    transform:scale(1);
+    min-width:50px;
+    min-height:50px;
+    background-color: var(--sbgc);
+    padding: 4px;
+    border-radius: 5px;
+}
+
+.cell:active {
+    transform:scale(.98);
+
+}
+
+.cell:hover {
+    filter:brightness(.9);
+}
+
+.hidden {
+    display: none;
+}
+
+.win-cell {
+    background-color: var(--winbgc);
+}
