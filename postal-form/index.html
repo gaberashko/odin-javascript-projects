@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Postal Form</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="card">
+            <h1>Postal Form</h1>
+            <form id="postalForm" novalidate>
+                <fieldset id="account">
+                    <label for="email">Email address</label>
+                    <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        required
+                        autocomplete="off"
+                    />
+                    <label for="pass">Password</label>
+                    <input
+                        type="password"
+                        name="pass"
+                        id="pass"
+                        minlength="8"
+                        required
+                    />
+                    <label for="passConfirm">Confirm Password</label>
+                    <input
+                        type="password"
+                        name="passConfirm"
+                        id="passConfirm"
+                        minlength="8"
+                        required
+                    />
+                </fieldset>
+                <fieldset id="mail">
+                    <label for="country">Country</label>
+                    <select name="country" id="postalCountry">
+                        <option value="us">United States</option>
+                        <option value="gh">Ghana</option>
+                        <option value="th">Thailand</option>
+                    </select>
+                    <label for="postalCode">Postal code</label>
+                    <input
+                        type="text"
+                        name="postalCode"
+                        id="postalCode"
+                        required
+                        autocomplete="off"
+                    />
+                </fieldset>
+                <button id="postalFormSubmit" type="submit">Submit</button>
+            </form>
+        </div>
+        <script src="javascript.js"></script>
+    </body>
+</html>

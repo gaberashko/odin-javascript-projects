@@ -1,0 +1,144 @@
+:root {
+    /* COLORS */
+    --BACKGROUND_COLOR: #424242;
+    --CARD_COLOR: #d8d8d8;
+    --PRIMARY_COLOR: #3e92f2;
+    --TEXT_COLOR: #252525;
+    --TEXT_INVERTED_COLOR:#e0e0e0;
+    --LABEL_COLOR: #3b3b3b;
+    --SHADOW_COLOR: #434343a7;
+
+    --INPUT_VALID: #4dbe2b;
+    --INPUT_INVALID: #f56c6c;
+
+    /* SIZING */
+    --PAD_XS: 4px;
+    --PAD_S: 8px;
+    --PAD_M: 16px;
+    --PAD_L: 24px;
+    --PAD_XL: 32px;
+    --PAD_XXL: 88px;
+
+    --FONT_XS: 0.6rem;
+    --FONT_S: 0.8rem;
+    --FONT_M: 1rem;
+    --FONT_L: 1.2rem;
+    --FONT_XL: 1.6rem;
+    --FONT_XXL: 1.8rem;
+
+    /* EFFECTS */
+    --INPUT_BORDER: 1px solid var(--SHADOW_COLOR);
+    --INPUT_INVALID_BORDER: 1px solid var(--INPUT_INVALID);
+    --INPUT_VALID_BORDER: 1px solid var(--INPUT_VALID);
+    --BORDER_ROUND: 6px;
+    --BORDER_BUTTON: 4px;
+    --BLOCK_SHADOW: 1px 1px 1px var(--SHADOW_COLOR);
+    --HOVER: brightness(0.98);
+    --CLICK: brightness(0.90);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    color: var(--TEXT_COLOR);
+    border: none;
+}
+
+body {
+    background-color: var(--BACKGROUND_COLOR);
+    padding: var(--PAD_M) var(--PAD_XXL);
+    height: 100vh;
+    min-width:640px;
+}
+
+h1 {
+    font-size: var(--FONT_XXL);
+    text-decoration: underline;
+}
+
+label {
+    color: var(--LABEL_COLOR);
+}
+
+button, input {
+    padding: var(--PAD_XS);
+}
+
+button {
+    background-color: var(--PRIMARY_COLOR);
+    color: var(--TEXT_INVERTED_COLOR);
+    padding: var(--PAD_XS);
+    border-radius: var(--BORDER_BUTTON);
+    box-shadow: var(--BLOCK_SHADOW);
+    text-shadow:1px 1px 0px var(--SHADOW_COLOR);
+    width:fit-content;
+    cursor: pointer;
+}
+
+button:hover {
+    filter:var(--HOVER);
+}
+
+button:active {
+    filter:var(--CLICK);
+}
+
+
+input, select {
+    display: block;
+    border: var(--INPUT_BORDER);
+    border-radius:var(--BORDER_ROUND);
+    box-shadow:inset 0 0 1px var(--SHADOW_COLOR);
+    margin: 0 var(--PAD_S) var(--PAD_S);
+}
+
+input:user-invalid {
+    border: var(--INPUT_INVALID_BORDER);
+}
+
+input:user-valid {
+    border: var(--INPUT_VALID_BORDER)
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: var(--PAD_M);
+    height:100%;
+    min-height: fit-content;
+    width: 60vw;
+    min-width: fit-content;
+    background-color: var(--CARD_COLOR);
+    border-radius: var(--BORDER_ROUND);
+}
+
+#postalForm {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns:1fr 1fr;
+    gap:0 var(--PAD_M);
+    width:max-content;
+    justify-items:center;
+    align-items:start;
+}
+
+#postalForm button {
+    position: relative;
+    bottom: var(--PAD_S);
+    margin: 0 var(--PAD_S);
+    justify-self:start;
+}
+
+#account {
+    grid-row:1 / span 3;
+}
+
+#mail {
+    grid-row:1 / span 2;
+}
+
